@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://ip地址:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+
+logging:
+  level:
+    root: warn
+    com.star: info
+  file: lgo/blog-pro.lgo
+
+mybatis:
+  type-aliases-package: com.msj
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
